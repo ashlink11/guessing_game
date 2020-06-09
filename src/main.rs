@@ -2,14 +2,14 @@ use std::io;
 
 fn main() {
     println!("Guess the number!");
+    
     println!("Please input your guess.");
-    let mut guess = String::new();
+    
+    let mut guess = String::new(); //vars are immutable by default
 
     io::stdin()
-        .read_line($mut guess)
+        .read_line(&mut guess)
         .expect("Failed to read line");
-
-    println!("You guessed: {}", guess);
-
-    let mut guess = String::new(); //vars are immutable by default
+        
+        println!("You guessed: {}", guess);
 }
